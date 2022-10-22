@@ -91,6 +91,12 @@
 <script type="text/javascript">
 var timer;
 function restart(){
+	var h = document.documentElement.clientHeight;
+	var w = document.documentElement.clientWidth;
+	var imgScale = 0.5;
+	if (h > w) {
+		imgScale = 0.2;
+	}
 	TagCanvas.Start('myCanvas', 'tags', {
 		reverse: true,
 		depth: 0.8,
@@ -101,7 +107,7 @@ function restart(){
 		// imageRadius: "100%",
 		clickToFront: 500,
 		outlineMethod: "none",
-		imageScale: 0.5,
+		imageScale: imgScale,
 		interval: 30,
 		maxBrightness: 1.0,
 		minBrightness: 0.5
