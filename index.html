@@ -110,19 +110,20 @@ function restart(){
 window.onload = function () {
 	var h = document.documentElement.clientHeight;
 	var w = document.documentElement.clientWidth;
+	console.log('h:' + h + ' w:' + w);
 	if (h > w) {
 		h = w;
 	} else {
 		h = h;
 	}
-	var canvasWidth = h/1080*950;
+	var canvasWidth = h;
 	var canvasEl = document.getElementById('myCanvas');
 	canvasEl.width = canvasWidth;
 	canvasEl.height = canvasWidth;
 	canvasEl.style.width = canvasWidth+'px';
 	canvasEl.style.height = canvasWidth+'px';
 	member.forEach(function (item, index) {
-         console.log(item);
+        // console.log(item);
     });
 	//var imgs = document.querySelectorAll('a img');
 	// for(var i=0; i<imgs.length; i++){
