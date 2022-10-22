@@ -165,11 +165,15 @@ window.onload = function () {
 };
 
 function onClick(index){
-	console.log(index);
+	//console.log(index);
 	var dataItem = dataList[index];
 	document.getElementById('imgSrc').src = dataItem.imgSrc;
 	if (dataItem.type == '2') {
+		//console.log('index:' + index);
 		document.getElementById('imgSrc').style.height = '500px';
+	} else {
+		document.getElementById('imgSrc').style.height = '100%';
+
 	}
 	document.getElementById('dateTime').innerText = dataItem.dateTime;
 	document.getElementById('desc').innerText = dataItem.desc;
