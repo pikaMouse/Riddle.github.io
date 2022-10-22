@@ -108,7 +108,14 @@ function restart(){
 	});
 }
 window.onload = function () {
-	var canvasWidth = document.documentElement.clientHeight/1080*950;
+	var h = document.documentElement.clientHeight;
+	var w = document.documentElement.clientWidth;
+	if (h > w) {
+		h = w;
+	} else {
+		h = h;
+	}
+	var canvasWidth = h/1080*950;
 	var canvasEl = document.getElementById('myCanvas');
 	canvasEl.width = canvasWidth;
 	canvasEl.height = canvasWidth;
