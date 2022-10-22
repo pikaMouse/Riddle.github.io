@@ -1,1 +1,1 @@
-Riddle 相册
+Riddle 相册1.0
