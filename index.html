@@ -83,6 +83,14 @@
 	.display-hide {
 		display: none;
 	}
+
+	.audio {
+		position: fixed;
+		width: 300px;
+		height: 100%;
+		right: 0;
+		bottom: 0;
+	}
 </style>
 
 <!-- <script type="text/javascript" src="jquery-1.11.3.min.js"></script> -->
@@ -113,7 +121,7 @@ function restart(){
 		minBrightness: 0.5
 	});
 }
-window.onload = function () {
+window.onload = function () { 
 	var h = document.documentElement.clientHeight;
 	var w = document.documentElement.clientWidth;
 	console.log('h:' + h + ' w:' + w);
@@ -303,7 +311,7 @@ var dataList = [
 <div id="mask" class="uni-mask display-hide"></div>
 <!-- 弹出层 -->
 <div class="b_10_3">
-
+	<audio controls autoplay class="audio">   <source src="img/bgm.mp3" > </audio>
 	<canvas width="1000" height="1000" id="myCanvas"></canvas>
 	<div id="tags">
 		<a href="#" onclick="onClick(0)"><img src="img/small/1.jpg"/></a>
